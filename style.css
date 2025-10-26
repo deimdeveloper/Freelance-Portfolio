@@ -1,0 +1,274 @@
+/* ===== GENERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #121212;
+  color: #f2f2f2;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(25, 25, 25, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 70px;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #ff66b2;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff66b2;
+}
+
+#mode-toggle {
+  background: none;
+  border: none;
+  color: #ff66b2;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#mode-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 120px 10% 80px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ff66b2;
+}
+
+/* ===== HOME ===== */
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #ff66b2;
+}
+
+.highlight {
+  color: #ff66b2;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff66b2, #b366ff);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff4da6, #9c4dff);
+}
+
+/* ===== ABOUT ===== */
+#about p {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+.looking-editor {
+  margin-top: 40px;
+  background: rgba(255, 102, 178, 0.08);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+  color: #eaeaea;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(255, 102, 178, 0.2);
+}
+
+.looking-editor h3 {
+  color: #ff66b2;
+  margin-bottom: 10px;
+}
+
+/* ===== WORK ===== */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project video {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* ===== CONTACT ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1e1e1e;
+  color: white;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff66b2, #b366ff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff4da6, #9c4dff);
+}
+
+/* ===== SOCIALS ===== */
+.socials {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(45deg, #ff66b2, #b366ff);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff4da6, #9c4dff);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  background: rgba(25, 25, 25, 0.9);
+  color: #aaa;
+}
+
+/* ===== LIGHT MODE ===== */
+.light-mode {
+  background: #fafafa;
+  color: #222;
+}
+
+.light-mode nav {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.light-mode nav ul li a {
+  color: #333;
+}
+
+.light-mode .logo {
+  color: #ff3385;
+}
+
+.light-mode #mode-toggle {
+  color: #ff3385;
+}
+
+.light-mode .looking-editor {
+  background: rgba(255, 51, 133, 0.1);
+  color: #333;
+}
+
+.light-mode input, 
+.light-mode textarea {
+  background: #fff;
+  color: #222;
+}
+
+.light-mode footer {
+  background: #fff;
+  color: #555;
+}
